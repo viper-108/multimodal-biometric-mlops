@@ -41,14 +41,14 @@ def add_split_column(table: pa.Table, cfg: SplitConfig) -> pa.Table:
             continue
 
         # Rounded allocations
-        n_train = int(round(n * cfg.train))
-        n_val = int(round(n * cfg.val))
+        n_train = round(n * cfg.train)
+        n_val = round(n * cfg.val)
 
         # Ensure at least 1 train sample when possible
         if cfg.train > 0 and n_train == 0:
             n_train = 1
 
-        # Clamp so we don’t exceed n
+        # Clamp so we don't exceed n
         n_train = min(n_train, n)
         n_val = min(n_val, n - n_train)
 

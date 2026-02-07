@@ -4,7 +4,7 @@ import time
 from dataclasses import dataclass
 
 import torch
-import torch.nn.functional as F
+import torch.nn.functional as functional
 from torch.utils.data import DataLoader
 
 
@@ -45,7 +45,7 @@ def train_one_epoch(
         optimizer.zero_grad(set_to_none=True)
         with torch.cuda.amp.autocast(enabled=amp and device.type == "cuda"):
             logits = model(x_fp, x_il, x_ir)
-            loss = F.cross_entropy(logits, y)
+            loss = functional.cross_entropy(logits, y)
 
         scaler.scale(loss).backward()
         scaler.unscale_(optimizer)
@@ -81,7 +81,7 @@ def eval_one_epoch(
         y = batch["label"].to(device, non_blocking=True)
 
         logits = model(x_fp, x_il, x_ir)
-        loss = F.cross_entropy(logits, y)
+        loss = functional.cross_entropy(logits, y)
 
         bs = y.shape[0]
         total_loss += float(loss.item()) * bs

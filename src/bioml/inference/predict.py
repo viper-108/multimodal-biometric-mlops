@@ -62,7 +62,7 @@ def predict_one(cfg: Any) -> dict[str, Any]:
     true_person_id = int(sample.get("person_id", sample["label"]).item())
 
     preds = []
-    for rank, (cid, prob) in enumerate(zip(i.tolist(), v.tolist()), start=1):
+    for rank, (cid, prob) in enumerate(zip(i.tolist(), v.tolist(), strict=True), start=1):
         cid = int(cid)
         preds.append(
             {

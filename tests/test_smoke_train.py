@@ -11,10 +11,10 @@ def test_smoke_train_cpu(tmp_path):
     arrays = processed_dir / "arrays"
     arrays.mkdir(parents=True, exist_ok=True)
 
-    H, W = 32, 32
+    h, w = 32, 32
     rows = []
     for i in range(6):
-        arr = (np.random.rand(H, W) * 255).astype("uint8")
+        arr = (np.random.rand(h, w) * 255).astype("uint8")
         fp = arrays / f"{i}_fp.npy"
         il = arrays / f"{i}_il.npy"
         ir = arrays / f"{i}_ir.npy"
@@ -43,7 +43,7 @@ def test_smoke_train_cpu(tmp_path):
             "preprocess": {
                 "manifest_name": "manifest.parquet",
                 "arrays_subdir": "arrays",
-                "target_size": [H, W],
+                "target_size": [h, w],
             },
             "dataloader": {
                 "batch_size": 2,
