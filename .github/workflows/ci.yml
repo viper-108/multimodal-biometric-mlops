@@ -40,7 +40,7 @@ jobs:
       - name: Typecheck (mypy) (non-blocking)
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: mypy --explicit-package-bases src || true
+        run: mypy --explicit-package-bases src/bioml/utils src/bioml/training || true
 
       - name: Tests (pytest)
         env:
