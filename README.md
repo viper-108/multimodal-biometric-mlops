@@ -67,7 +67,7 @@ Outputs:
 
 ### 6) Inference
 ```bash
-python -m src.bioml.scripts.infer   infer.checkpoint_path=runs/<run_id>/checkpoints/last.pt   infer.sample_id=0   dataset.processed_dir=data/processed/multimodal_biometrics
+python -m src.bioml.scripts.infer infer.checkpoint_path="runs/20260207_121718_bioml/checkpoints/last.pt" infer.sample_id=0
 ```
 
 ---
