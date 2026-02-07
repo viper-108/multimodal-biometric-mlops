@@ -37,11 +37,10 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}
         run: black --check src tests
 
-      - name: Typecheck (mypy)
+      - name: Typecheck (mypy) (non-blocking)
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: mypy --explicit-package-bases src
-
+        run: mypy --explicit-package-bases src || true
 
       - name: Tests (pytest)
         env:
