@@ -40,7 +40,8 @@ jobs:
       - name: Typecheck (mypy)
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: mypy src
+        run: mypy --explicit-package-bases src
+
 
       - name: Tests (pytest)
         env:
