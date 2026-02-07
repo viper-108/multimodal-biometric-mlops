@@ -39,6 +39,8 @@ python -m src.bioml.scripts.preprocess dataset.download_from_kaggle=true
 
 > The pipeline is robust to minor folder layout differences. It scans for image files and builds a canonical manifest.
 
+For this task I have uploaded the whole dataset in github, so that direct run can be possible.
+
 ### 3) Build processed dataset (parallel)
 ```bash
 python -m src.bioml.scripts.preprocess   dataset.raw_dir=data/raw/multimodal_biometrics   dataset.processed_dir=data/processed/multimodal_biometrics   preprocess.num_workers=8
