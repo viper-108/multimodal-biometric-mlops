@@ -1,0 +1,2 @@
+- dataset.raw_dir=data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET
+- preprocess.num_workers=8

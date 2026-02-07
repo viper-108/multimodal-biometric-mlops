@@ -1,0 +1,12 @@
+backend: "multiprocessing"  # "multiprocessing" | "ray"
+num_workers: 8
+
+target_size: [224, 224]   # [H, W]
+grayscale: true
+dtype: "uint8"
+
+save_arrays: true
+arrays_subdir: "arrays"
+manifest_name: "manifest.parquet"
+
+profile: true

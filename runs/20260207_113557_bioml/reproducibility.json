@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "deterministic": true,
+  "cudnn_deterministic": true,
+  "cudnn_benchmark": false,
+  "pythonhashseed": "42"
+}

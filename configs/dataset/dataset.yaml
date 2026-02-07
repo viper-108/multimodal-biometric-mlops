@@ -1,0 +1,17 @@
+raw_dir: data/raw/multimodal_biometrics
+processed_dir: data/processed/multimodal_biometrics
+
+image_extensions: [".bmp", ".BMP", ".png", ".jpg", ".jpeg"]
+modalities:
+  fingerprint: ["fingerprint", "Fingerprint", "FP"]
+  iris_left: ["left", "Left", "iris_left", "IrisLeft"]
+  iris_right: ["right", "Right", "iris_right", "IrisRight"]
+
+download_from_kaggle: false
+kaggle_dataset: "ninadmehendale/multimodal-iris-fingerprint-biometric-data"
+
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+  seed: 123

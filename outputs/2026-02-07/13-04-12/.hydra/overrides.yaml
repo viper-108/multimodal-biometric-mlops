@@ -1,0 +1,2 @@
+- infer.checkpoint_path=runs/20260207_121718_bioml/checkpoints/last.pt
+- infer.sample_id=0

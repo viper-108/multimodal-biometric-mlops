@@ -1,0 +1,15 @@
+{
+  "num_samples": 265,
+  "elapsed_s": 1.9092838750220835,
+  "samples_per_s": 138.79549472282372,
+  "backend": "multiprocessing",
+  "num_workers": 8,
+  "target_size": [
+    224,
+    224
+  ],
+  "grayscale": true,
+  "has_fingerprint": 265,
+  "has_iris_left": 265,
+  "has_iris_right": 265
+}

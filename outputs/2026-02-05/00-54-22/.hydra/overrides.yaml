@@ -1,0 +1,2 @@
+- dataloader.num_workers=8
+- dataloader.batch_size=64

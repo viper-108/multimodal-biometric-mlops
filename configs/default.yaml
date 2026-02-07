@@ -1,0 +1,12 @@
+defaults:
+  - dataset: dataset
+  - preprocess: preprocess
+  - model: model
+  - train: train
+  - dataloader: dataloader
+  - infer: infer
+  - _self_
+
+run:
+  output_dir: runs
+  experiment_name: bioml
